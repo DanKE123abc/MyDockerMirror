@@ -1,5 +1,5 @@
-- [主页](../index.md)
+- [主页](index.md)
 
-- [搜索镜像](https://hub.docker.danke666.top/search?q=)
+- [搜索镜像](pages/search.iframe.html)
 
 - [Github](https://github.com/DanKE123abc/MyDockerMirror)
