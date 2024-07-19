@@ -104,6 +104,18 @@ async function nginx() {
 
 export default {
 	async fetch(request, env, ctx) {
+		// 获取请求的完整URL并解析
+		const _url = new URL(request.url);
+		const _pathname = _url.pathname;
+		const _searchParams = _url.search;
+
+		// 检查请求是否只包含域名，即没有路径和查询参数
+		if (pathname === '/' && _searchParams === '') {
+			// 执行跳转到 b.com
+			return Response.redirect('https://docker.danke666.top', 302);
+		}
+
+
 		const getReqHeader = (key) => request.headers.get(key); // 获取请求头
 
 		let url = new URL(request.url); // 解析请求URL
