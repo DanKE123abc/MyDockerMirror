@@ -104,7 +104,6 @@ async function nginx() {
 
 export default {
 	async fetch(request, env, ctx) {
-
 		const getReqHeader = (key) => request.headers.get(key); // 获取请求头
 
 		let url = new URL(request.url); // 解析请求URL
